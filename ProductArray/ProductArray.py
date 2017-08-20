@@ -14,7 +14,6 @@ def my_function(arr):
 
     # calculate product of decreasing array
     for ind in range(len(arr)-1, -1, -1):
-        
         if ind is len(arr)-1:
             backward_rolling_product = 1
         else:
