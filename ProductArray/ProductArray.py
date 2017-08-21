@@ -2,7 +2,7 @@
 # Write a function getProductsOfAllIntsExceptAtIndex() that takes an array of integers and returns an array of the products.
 # Do not use division in your solution.
 
-def my_function(arr):
+def get_products_of_all_ints_except_at_index(arr):
     result_arr = [0] * len(arr)
     # calculate product of increasing array
     for ind in range(len(arr)):
@@ -22,5 +22,5 @@ def my_function(arr):
 
     return result_arr
 
-print(my_function([1, 7, 3, 4]))
-print(my_function([0, 0, 0, 0]))
+print(get_products_of_all_ints_except_at_index([1, 7, 3, 4]))
+print(get_products_of_all_ints_except_at_index([0, 0, 0, 0]))
