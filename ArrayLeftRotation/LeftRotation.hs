@@ -11,7 +11,7 @@ main = do
     let k = read $ n_t!!1 :: Int
     a_temp <- getLine
     let a = map read $ words a_temp :: [Int]
-    let ret = (recRepeat rotateLeft k a)
+    let ret = recRepeat rotateLeft k a
     -- print ret
     -- prettyPrint ret
     mapM_ print ret
@@ -25,14 +25,14 @@ main = do
 
 rotateLeft :: [Int] -> [Int]
 
-rotateLeft arr = do
+rotateLeft arr =
     case arr of 
         []  -> []
         h:t -> t ++ [h]
 
 recRepeat func times param =
     if times <= 0 then param
-    else (recRepeat func (times - 1) (func param))
+    else recRepeat func (times - 1) (func param)
 
 
 getMultipleLines :: Int -> IO [String]
@@ -42,5 +42,5 @@ getMultipleLines n
     | otherwise = do          
         x <- getLine         
         xs <- getMultipleLines (n-1)    
-        let ret = (x:xs)    
+        let ret = x:xs
         return ret
